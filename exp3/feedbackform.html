@@ -4,108 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            background-color: #f8f9fa;
+            padding: 2rem 0;
         }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        .form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            padding: 2rem;
         }
-
-        h2 {
-            color: #333;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        label {
-            font-weight: bold;
-            color: #555;
-            margin-bottom: 5px;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-            box-sizing: border-box;
-        }
-
-        select {
-            background-color: white;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        
-
-        .submit-btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
+        .rating-stars {
             cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
+            font-size: 1.5rem;
         }
-
-        
-
+        .rating-stars .bi-star-fill {
+            color: #ffc107;
+        }
+        .rating-stars .bi-star {
+            color: #dee2e6;
+        }
+        .form-floating {
+            margin-bottom: 1rem;
+        }
+        .form-select, .form-control {
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Feedback Form</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-            
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone">
-            
-            <label for="rating">Rating</label>
-            <select id="rating" name="rating" required>
-                <option value="">--Select Rating--</option>
-                <option value="1">1 - Poor</option>
-                <option value="2">2 - Fair</option>
-                <option value="3">3 - Good</option>
-                <option value="4">4 - Very Good</option>
-                <option value="5">5 - Excellent</option>
-            </select>
-            
-            <label for="questions">Any Questions regarding product or service</label>
-            <textarea id="questions" name="questions" rows="5" required></textarea>
-            
-            <label for="comments">Additional Comments (Optional)</label>
-            <textarea id="comments" name="comments" rows="5"></textarea>
-            
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-container">
+                    <h2 class="text-center mb-4">Feedback Form</h2>
+                    <p class="text-muted text-center mb-4">We value your feedback. Please help us improve our products and services.</p>
+                    
+                    <form class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                    <label for="name"><i class="bi bi-person"></i> Your Name</label>
+                                    <div class="invalid-feedback">
+                                        Please provide your name.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                    <label for="email"><i class="bi bi-envelope"></i> Your Email</label>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone Number" required>
+                            <label for="phone"><i class="bi bi-telephone"></i> Your Phone Number</label>
+                            <div class="invalid-feedback">
+                                Please provide your phone number.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label"><i class="bi bi-star-half"></i> How would you rate our product/service?</label>
+                            <div class="rating-stars d-flex justify-content-center my-3">
+                                <input type="hidden" id="rating" name="rating" value="0" required>
+                                <i class="bi bi-star me-1" data-value="1"></i>
+                                <i class="bi bi-star me-1" data-value="2"></i>
+                                <i class="bi bi-star me-1" data-value="3"></i>
+                                <i class="bi bi-star me-1" data-value="4"></i>
+                                <i class="bi bi-star" data-value="5"></i>
+                            </div>
+                            <div class="text-center text-muted small mb-3" id="rating-text">Click to rate</div>
+                            <div class="invalid-feedback text-center">
+                                Please select a rating.
+                            </div>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="questions" name="questions" placeholder="Any Questions regarding product or service" style="height: 120px" required></textarea>
+                            <label for="questions"><i class="bi bi-question-circle"></i> Any Questions regarding product or service</label>
+                            <div class="invalid-feedback">
+                                Please provide your questions or feedback about our product/service.
+                            </div>
+                        </div>
+                        
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control" id="comments" name="comments" placeholder="Additional Comments (Optional)" style="height: 120px"></textarea>
+                            <label for="comments"><i class="bi bi-chat-text"></i> Additional Comments (Optional)</label>
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="contact-me" name="contact-me">
+                            <label class="form-check-label" for="contact-me">
+                                I'd like to be contacted about my feedback
+                            </label>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-send"></i> Submit Feedback
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for star rating and form validation -->
+    <script>
+        // Star rating functionality
+        const ratingStars = document.querySelectorAll('.rating-stars i');
+        const ratingInput = document.getElementById('rating');
+        const ratingText = document.getElementById('rating-text');
+        
+        const ratingDescriptions = [
+            'Click to rate',
+            'Poor',
+            'Fair',
+            'Good',
+            'Very Good',
+            'Excellent'
+        ];
+        
+        ratingStars.forEach(star => {
+            star.addEventListener('click', () => {
+                const value = parseInt(star.getAttribute('data-value'));
+                ratingInput.value = value;
+                
+                // Update stars
+                ratingStars.forEach(s => {
+                    const starValue = parseInt(s.getAttribute('data-value'));
+                    if (starValue <= value) {
+                        s.classList.remove('bi-star');
+                        s.classList.add('bi-star-fill');
+                    } else {
+                        s.classList.remove('bi-star-fill');
+                        s.classList.add('bi-star');
+                    }
+                });
+                
+                // Update text
+                ratingText.textContent = ratingDescriptions[value];
+            });
+        });
+        
+        // Form validation
+        (function () {
+            'use strict'
+            
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation');
+            
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity() || ratingInput.value === '0') {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        
+                        // Check if rating is missing
+                        if (ratingInput.value === '0') {
+                            ratingInput.nextElementSibling.style.display = 'block';
+                        }
+                    }
+                    
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
 </body>
 </html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaidika Padigela | Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        body {
+            padding-top: 20px;
+            background-color: #f8f9fa;
+        }
+        .section-container {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+        .project-card {
+            margin-bottom: 1.5rem;
+            padding: 1.25rem;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        hr {
+            margin: 1rem 0;
+            opacity: 0.25;
+        }
+        #toc {
+            position: sticky;
+            top: 20px;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #0d6efd;
+        }
+        .social-icons a:hover {
+            color: #0a58ca;
+        }
+        .hero-carousel {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="section-container text-center" id="toc">
+                    <h3 class="fs-4 mb-3">Vaidika Padigela</h3>
+                    <div class="list-group">
+                        <a href="#introduction" class="list-group-item list-group-item-action">Introduction</a>
+                        <a href="#skills" class="list-group-item list-group-item-action">Skills</a>
+                        <a href="#projects" class="list-group-item list-group-item-action">Projects</a>
+                        <a href="#achievements" class="list-group-item list-group-item-action">Achievements</a>
+                        <a href="#education" class="list-group-item list-group-item-action">Education</a>
+                        <a href="#contact" class="list-group-item list-group-item-action">Contact</a>
+                        <a href="#feedback" class="list-group-item list-group-item-action">Feedback</a>
+                    </div>
+                    <div class="mt-4 social-icons">
+                        <a href="https://www.linkedin.com/in/vaidika-padigela-299aa8268/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/vaidikapadigela" target="_blank"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-9">
+                <!-- Hero Carousel -->
+                <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="image4.png" class="d-block w-100" alt="Computer Science Engineer">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Computer Science Engineer</h3>
+                                <p>Passionate about developing innovative tech solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="image3.png" class="d-block w-100" alt="WE Scholar">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>WE Scholar</h3>
+                                <p>Selected among top 1% from over 22,000 applicants</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div class="section-container mb-4">
+                    <h1 class="display-5 fw-bold text-center">Vaidika Padigela</h1>
+                    <div class="text-center mb-3">
+                        <span class="badge bg-primary me-1">Computer Science Engineer</span>
+                        <span class="badge bg-secondary me-1">Developer</span>
+                        <span class="badge bg-info">WE Scholar</span>
+                    </div>
+                </div>
+
+                <div class="section-container" id="introduction">
+                    <h2 class="border-bottom pb-2">Self Introduction</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <img src="image8.png" alt="Vaidika Padigela" class="img-fluid rounded-circle" style="max-width: 200px;">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="lead">Third year student pursuing Computer Science Engineering at Keshav Memorial Institute of Technology, Hyderabad (2026)</p>
+                            <p>I am passionate about technology and innovation. My interests include AI/ML, web development, and building solutions that solve real-world problems. As a WE Scholar supported by Google, I am committed to excellence and continuous learning in the tech industry.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container" id="skills">
+                    <h2 class="border-bottom pb-2">Skills</h2>
+                    <div class="row mt-3">
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-filetype-cpp skill-icon text-primary"></i>
+                                    <span class="badge bg-primary fs-5 p-2 w-100">C++</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-filetype-java skill-icon text-danger"></i>
+                                    <span class="badge bg-danger fs-5 p-2 w-100">Java</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-filetype-py skill-icon text-success"></i>
+                                    <span class="badge bg-success fs-5 p-2 w-100">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-file-code skill-icon text-info"></i>
+                                    <span class="badge bg-info fs-5 p-2 w-100">C</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-database skill-icon text-warning"></i>
+                                    <span class="badge bg-warning text-dark fs-5 p-2 w-100">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-center h-100">
+                                <div class="card-body">
+                                    <i class="bi bi-database-fill skill-icon text-secondary"></i>
+                                    <span class="badge bg-secondary fs-5 p-2 w-100">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container" id="projects">
+                    <h2 class="border-bottom pb-2">Projects</h2>
+                    
+                    <!-- Projects Carousel -->
+                    <div id="projectsCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="HealthBot"></button>
+                            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Review Bot"></button>
+                            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="ZenMind"></button>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="image6.png" class="card-img-top project-img" alt="HealthBot">
+                                <div class="card-body">
+                                    <h3 class="card-title h5">HealthBot <a href="https://github.com/vaidikapadigela/HealthBot" target="_blank" class="btn btn-sm btn-outline-primary"><i class="bi bi-github"></i> GitHub</a></h3>
+                                    <ul class="list-group list-group-flush mt-3">
+                                        <li class="list-group-item">Disease identification based on user-entered symptoms</li>
+                                        <li class="list-group-item">Matches symptoms with corresponding diseases from a dataset</li>
+                                        <li class="list-group-item">Used Rasa NLU open source ML framework and json files</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="image5.png" class="card-img-top project-img" alt="Review Bot">
+                                <div class="card-body">
+                                    <h3 class="card-title h5">Review Bot <a href="https://github.com/vaidikapadigela/MavenJavaWeb" target="_blank" class="btn btn-sm btn-outline-primary"><i class="bi bi-github"></i> GitHub</a></h3>
+                                    <ul class="list-group list-group-flush mt-3">
+                                        <li class="list-group-item">VADER Sentiment Analysis to assess customer sentiment from reviews</li>
+                                        <li class="list-group-item">Text summarization techniques to condense customer feedback</li>
+                                        <li class="list-group-item">Retrieval-Augmented Generation (RAG) model for detailed product analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <img src="image7.png" class="card-img-top project-img" alt="ZenMind">
+                                <div class="card-body">
+                                    <h3 class="card-title h5">ZenMind <a href="https://github.com/vaidikapadigela/SampleMavenJavaProject" target="_blank" class="btn btn-sm btn-outline-primary"><i class="bi bi-github"></i> GitHub</a></h3>
+                                    <ul class="list-group list-group-flush mt-3">
+                                        <li class="list-group-item">A mindfulness platform with guided breathing exercises</li>
+                                        <li class="list-group-item">Integrated calendar and to-do list synchronization</li>
+                                        <li class="list-group-item">API-driven soundscape customization and visualizations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container" id="achievements">
+                    <h2 class="border-bottom pb-2">Achievements</h2>
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="image2.png" class="img-fluid rounded-start h-100" alt="WE Scholar">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title">TalentSprint Women Engineers</h3>
+                                    <div class="card-text">
+                                        <ul>
+                                            <li>Women Engineers Program offered by TalentSprint, supported by Google</li>
+                                            <li>One of the top 1% scholars selected from over 22,000 eligible applicants across the country</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container" id="education">
+                    <h2 class="border-bottom pb-2">Education</h2>
+                    <div class="row mb-4">
+                        <div class="col-md-3 text-center">
+                            <img src="image1.png" class="img-fluid rounded-circle mb-3" alt="KMIT">
+                        </div>
+                        <div class="col-md-9">
+                            <h4>Bachelor Of Technology (B.Tech) - Computer Science</h4>
+                            <h5>Keshav Memorial Institute of Technology</h5>
+                            <p><span class="badge bg-success">CGPA: 8.4/10</span> | 2022 - 2026</p>
+                        </div>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Institution</th>
+                                    <th>Score</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bachelor Of Technology (B.Tech) - Computer Science</td>
+                                    <td>Keshav Memorial Institute of Technology</td>
+                                    <td><span class="badge bg-success">CGPA: 8.4/10</span></td>
+                                    <td>2022 - 2026</td>
+                                </tr>
+                                <tr>
+                                    <td>Telangana State Board of Intermediate Education (TSBIE)</td>
+                                    <td>Narayana Junior College</td>
+                                    <td><span class="badge bg-success">Percentage: 96.8%</span></td>
+                                    <td>2020 - 2022</td>
+                                </tr>
+                                <tr>
+                                    <td>SSC - Secondary School Certificate</td>
+                                    <td>Vasavi High School</td>
+                                    <td><span class="badge bg-success">GPA: 10/10</span></td>
+                                    <td>2019 - 2020</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="section-container" id="contact">
+                    <h2 class="border-bottom pb-2">Contact Me</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="username" placeholder="Enter your name" required>
+                                    <div class="invalid-feedback">
+                                        Please provide your name.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="number" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="number" name="phno" placeholder="Enter your phone number" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid phone number.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="query" class="form-label">Query</label>
+                                    <textarea class="form-control" id="query" rows="5" placeholder="Enter your query" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please enter your query.
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
+                            </form>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card mt-3 mt-md-0">
+                                <div class="card-body">
+                                    <h3 class="card-title">Contact Information</h3>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-telephone-fill me-2"></i> 
+                                            <a href="tel:6303275073" class="text-decoration-none">6303275073</a>
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-envelope-fill me-2"></i>
+                                            <a href="mailto:vaidika05@gmail.com" class="text-decoration-none">vaidika05@gmail.com</a>
+                                        </li>
+                                    </ul>
+                                    
+                                    <h5 class="mt-4">Connect With Me</h5>
+                                    <div class="social-icons">
+                                        <a href="https://www.linkedin.com/in/vaidika-padigela-299aa8268/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                        <a href="https://github.com/vaidikapadigela" target="_blank"><i class="bi bi-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container" id="feedback">
+                    <h2 class="border-bottom pb-2">Feedback</h2>
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="feedback-name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="feedback-name" name="username" placeholder="Enter your name" required>
+                            <div class="invalid-feedback">
+                                Please provide your name.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="feedback-number" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="feedback-number" name="phno" placeholder="Enter your phone number" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid phone number.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="feedback-text" class="form-label">Feedback</label>
+                            <textarea class="form-control" id="feedback-text" rows="5" placeholder="Enter your feedback" required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter your feedback.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Rate Your Experience</label>
+                            <div class="rating-stars d-flex justify-content-center my-3">
+                                <input type="hidden" id="rating" name="rating" value="0" required>
+                                <i class="bi bi-star me-1" data-value="1"></i>
+                                <i class="bi bi-star me-1" data-value="2"></i>
+                                <i class="bi bi-star me-1" data-value="3"></i>
+                                <i class="bi bi-star me-1" data-value="4"></i>
+                                <i class="bi bi-star" data-value="5"></i>
+                            </div>
+                            <div class="text-center text-muted small mb-3" id="rating-text">Click to rate</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="text-center py-4 mt-4">
+            <p>© 2025 Vaidika Padigela. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Form validation and star rating script -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+                
+            // Star rating functionality
+            const ratingStars = document.querySelectorAll('.rating-stars i');
+            const ratingInput = document.getElementById('rating');
+            const ratingText = document.getElementById('rating-text');
+            
+            const ratingDescriptions = [
+                'Click to rate',
+                'Poor',
+                'Fair',
+                'Good',
+                'Very Good',
+                'Excellent'
+            ];
+            
+            ratingStars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const value = parseInt(star.getAttribute('data-value'));
+                    ratingInput.value = value;
+                    
+                    // Update stars
+                    ratingStars.forEach(s => {
+                        const starValue = parseInt(s.getAttribute('data-value'));
+                        if (starValue <= value) {
+                            s.classList.remove('bi-star');
+                            s.classList.add('bi-star-fill');
+                        } else {
+                            s.classList.remove('bi-star-fill');
+                            s.classList.add('bi-star');
+                        }
+                    });
+                    
+                    // Update text
+                    ratingText.textContent = ratingDescriptions[value];
+                });
+            });
+        })()
+    </script>
+</body>
+</html>
